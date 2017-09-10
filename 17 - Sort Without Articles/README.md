@@ -1,11 +1,10 @@
-# Slide in on Scroll
+# Sort without Articles
 
 A [Wes Bos ](http://wesbos.com/) project part of the [JavaScript30](https://javascript30.com/) course.
 
 ## What I learned
 
-* TranslateX and change opacity with transform attribute
-* Play with scroll event and calculate the distances of images in the screen
+* Sort & filter array elements with regex
 
 ## License
 
