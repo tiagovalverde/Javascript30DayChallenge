@@ -12,4 +12,4 @@ A [Wes Bos ](http://wesbos.com/) project part of the [JavaScript30](https://java
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.Local 
