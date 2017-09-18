@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Understanding JavaScript's Capture</title>
+</head>
+<body class="bod">
+
+  <div class="one">
+    <div class="two">
+      <div class="three">
+      </div>
+    </div>
+  </div>
+
+<style>
+  html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after { box-sizing: inherit; }
+
+  div {
+    width:100%;
+    padding:100px;
+  }
+
+  .one {
+    background: thistle;
+  }
+
+  .two {
+    background:mistyrose;
+  }
+
+  .three {
+    background:coral;
+  }
+</style>
+
+<button></button>
+<script>
+
+  //about add event listener
+  //new property called once
+
+  const divs = document.querySelectorAll('div');
+
+  const button = document.querySelector('button');
+
+
+  function logText(e){
+    //stop calling this event up
+    e.stopPropagation(); //stop bubbling (will no longer trigger events on parent elements)
+
+    //clicking on the moest nested div, 3 event clicks occur
+    console.log(this.classList.value);
+  }
+
+
+  //capture -> run the fn on the way down instead of way up
+  //once -> listen for a click and unbind itself (remove event listener)
+  divs.forEach(div => div.addEventListener('click', logText, {
+    capture: false,
+    once: true
+  }));
+
+  
+  button.addEventListener('click', () => {
+
+    console.log('Click!!');
+  }, {
+    once: true
+  });
+
+</script>
+</body>
+</html>
